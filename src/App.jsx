@@ -1,8 +1,6 @@
 import { useState } from "react";
-import EducationalExp from "./components/EducationalExp";
-import GeneralInfo from "./components/GeneralInfo";
-import WorkExp from "./components/WorkExp";
-import DisplayComponent from "./components/DisplayCompenent";
+import Form from "./Form";
+import DisplayFormComponent from "./components/DisplayFormComponent";
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState({
@@ -15,46 +13,38 @@ function App() {
   const [educationalExp, setEducationalExp] = useState({
     study: "",
     schoolName: "",
-    startDate: "",
-    endDate: "",
+    startMonth: "",
+    startYear: "",
+    endMonth: "",
+    endYear: "",
   });
 
   const [workExp, setWorkExp] = useState({
     job: "",
     company: "",
-    startDate: "",
-    endDate: "",
     responsibility: "",
+    startMonth: "",
+    startYear: "",
+    endMonth: "",
+    endYear: "",
   });
 
-  function handelForm(e) {
-    e.preventDefault();
-    console.log(workExp, educationalExp, generalInfo);
-  }
-
   return (
-    <div className=" grid content-between min-h-dvh">
-      <GeneralInfo
-        handelForm={handelForm}
+    <main className="text-sm text-bold text-slate-700 font-mono grid sm:grid-cols-2 gap-6  min-h-dvh p-5  bg-gray-200 ">
+      <Form
         generalInfo={generalInfo}
         setGeneralInfo={setGeneralInfo}
-      />
-      <WorkExp
         workExp={workExp}
         setWorkExp={setWorkExp}
-        handelForm={handelForm}
-      />
-      <EducationalExp
         educationalExp={educationalExp}
         setEducationalExp={setEducationalExp}
-        handelForm={handelForm}
       />
-      <DisplayComponent
+      <DisplayFormComponent
         generalInfo={generalInfo}
         workExp={workExp}
         educationalExp={educationalExp}
       />
-    </div>
+    </main>
   );
 }
 

@@ -1,67 +1,60 @@
 import PropTypes from "prop-types";
-
-export default function WorkExp({ workExp, setWorkExp, handelForm }) {
+import TextInput from "./TextInput";
+import DateInput from "./DateInput";
+export default function WorkExp({ workExp, setWorkExp }) {
   function handleChange(e) {
     setWorkExp({ ...workExp, [e.target.name]: e.target.value });
   }
 
   return (
-    <form className=" border-2 border-slate-800" onSubmit={handelForm}>
-      <label htmlFor="job-title">Job Title</label>
-      <input
-        name="job"
-        required
-        type="text"
-        id="job-title"
-        placeholder="Software Enginner"
-        value={workExp.job}
-        onChange={handleChange}
-      />
-      <label htmlFor="company-name">Company Name</label>
-      <input
-        name="company"
-        required
-        type="text"
-        id="company-name"
-        placeholder="Meta"
-        value={workExp.company}
-        onChange={handleChange}
-      />
-      <label htmlFor="start-date">Start Date</label>
-      <input
-        name="startDate"
-        required
-        type="date"
-        id="start-date"
-        value={workExp.startDate}
-        onChange={handleChange}
-      />
-      <label htmlFor="end-date">End Date</label>
-      <input
-        name="endDate"
-        required
-        type="date"
-        id="End-date"
-        value={workExp.endDate}
-        onChange={handleChange}
-      />
-      <label htmlFor="responsibility">Main Responsibilities</label>
-      <textarea
-        name="responsibility"
-        className=" bg-orange-300"
-        type="text-area"
-        id="responsibility"
-        value={workExp.responsibility}
-        onChange={handleChange}
-      />
-      <button className="border-2 border-amber-600" type="submit">
-        Continue
-      </button>
-    </form>
+    <>
+      <h1 className="font-bold text-2xl border-b-2 border-yellow-500 max-w-fit">
+        Work Experience
+      </h1>
+      <section className="grid pb-12  md:grid-cols-2 gap-10 border-b  border-gray-300">
+        <div className="flex flex-col gap-3 ">
+          <label className="block" htmlFor="job-title">
+            Job Title
+          </label>
+
+          <TextInput
+            name="job"
+            id="job-title"
+            value={workExp.job}
+            placeholder="Pharmacist"
+            handleChange={handleChange}
+          />
+        </div>
+        <div className="flex flex-col gap-3 ">
+          <label className="block" htmlFor="company-name">
+            Company Name
+          </label>
+          <TextInput
+            name="company"
+            id="company-name"
+            value={workExp.company}
+            placeholder="Google"
+            handleChange={handleChange}
+          />
+        </div>
+        <DateInput exprience={workExp} handleChange={handleChange} />
+        <div className="flex flex-col gap-3 ">
+          <label className="block" htmlFor="responsibility">
+            Main Responsibilities
+          </label>
+          <textarea
+            name="responsibility"
+            className="bg-gray-100   p-2  focus:border-yellow-500 focus:outline focus:outline-1 focus:outline-yellow-500 focus:bg-slate-100 border  border-slate-300 rounded-md border-1 sm:w-full w-2/3"
+            id="responsibility"
+            value={workExp.responsibility}
+            onChange={handleChange}
+          />
+        </div>
+      </section>
+    </>
   );
 }
 WorkExp.propTypes = {
-  handelForm: PropTypes.func,
   setWorkExp: PropTypes.func,
   workExp: PropTypes.object,
 };
