@@ -5,30 +5,60 @@ export default function DisplayFormComponent({
   workExp,
   educationalExp,
 }) {
-  return (
-    <div>
-      <h2>General Information</h2>
-      <p>First Name: {generalInfo.firstName}</p>
-      <p>Last Name: {generalInfo.lastName}</p>
-      <p>Phone Number: {generalInfo.phoneNum}</p>
-      <p>Email: {generalInfo.email}</p>
-      <h2>Work Experience</h2>
-      <p>Job Title: {workExp.job}</p>
-      <p>Company: {workExp.company}</p>
-      <p>Start Month: {workExp.startMonth}</p>
-      <p>Start Year: {workExp.startYear}</p>
-      <p>End Month: {workExp.endMonth}</p>
-      <p>End Year: {workExp.endYear}</p>
-      <p>Responsibilities: {workExp.responsibility}</p>
+  const fullName =
+    `${generalInfo.firstName}  ${generalInfo.lastName}`.toUpperCase();
 
-      <h2>Educational Experience</h2>
-      <p>Field of Study: {educationalExp.study}</p>
-      <p>School Name: {educationalExp.schoolName}</p>
-      <p>Start Month: {educationalExp.startMonth}</p>
-      <p>Start Year: {educationalExp.startYear}</p>
-      <p>End Month: {educationalExp.endMonth}</p>
-      <p>End Year: {educationalExp.endYear}</p>
-    </div>
+  const workStartDate = `${workExp.startMonth} ${workExp.startYear}`;
+  const workEndDate = `${workExp.endMonth} ${workExp.endYear} `;
+  const educationStartDate = `${educationalExp.startMonth} ${educationalExp.startYear}`;
+  const educationEndDate = `${educationalExp.endMonth} ${educationalExp.endYear}`;
+
+  return (
+    <section className="  flex flex-col gap-14 font-garamond text-base min-h-dvh">
+      <div>
+        <h1 className="text-3xl text-center mb-4"> {fullName}</h1>
+        <ul className="flex gap-10 bg-neutral-700 p-4 text-white">
+          <li>{generalInfo.phoneNum}</li>
+          <li>{generalInfo.email}</li>
+        </ul>
+      </div>
+      <div>
+        <h2 className="font-bold text-lg border-b-2 border-yellow-500 max-w-fit mb-4">
+          Work Experience
+        </h2>
+        <p className="font-bold mb-2"> {workExp.job}</p>
+        <ul className="flex justify-between">
+          <li className="font-semibold text-sm"> {workExp.company}</li>
+
+          <div className="flex gap-2 text-sm mb-3">
+            {" "}
+            <li>{workStartDate}</li>
+            {workStartDate.length > 1 && <span>-</span>}
+            <li>{workEndDate}</li>
+          </div>
+        </ul>
+        <p>{workExp.responsibility}</p>
+      </div>
+
+      <div>
+        <h2 className="font-bold text-lg border-b-2 border-yellow-500 max-w-fit mb-4">
+          Educational Experience
+        </h2>
+
+        <p className="font-bold mb-2">{educationalExp.study}</p>
+
+        <ul className="flex justify-between">
+          <li className="text-sm font-semibold ">
+            {educationalExp.schoolName}
+          </li>
+          <div className="flex gap-2 text-sm">
+            <li>{educationStartDate}</li>
+            {educationStartDate.length > 1 && <span>-</span>}
+            <li>{educationEndDate}</li>
+          </div>
+        </ul>
+      </div>
+    </section>
   );
 }
 

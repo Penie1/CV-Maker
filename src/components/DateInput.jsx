@@ -20,7 +20,7 @@ export default function DateInput({ exprience, handleChange }) {
           >
             <option className="text-gray-400">Months</option>
             {months.map((mon) => (
-              <option key={mon} value={mon}>
+              <option key={mon} value={mon.slice(0, 3)}>
                 {mon}
               </option>
             ))}
@@ -55,7 +55,9 @@ export default function DateInput({ exprience, handleChange }) {
           >
             <option className="text-gray-400">Months</option>
             {months.map((mon) => (
-              <option key={mon}>{mon}</option>
+              <option key={mon} value={mon.slice(0, 3)}>
+                {mon}
+              </option>
             ))}
           </select>
           <select
