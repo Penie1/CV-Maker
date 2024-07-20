@@ -4,6 +4,7 @@ export default function DisplayFormComponent({
   generalInfo,
   workExp,
   educationalExp,
+  professionalSummary,
 }) {
   const fullName =
     `${generalInfo.firstName}  ${generalInfo.lastName}`.toUpperCase();
@@ -21,6 +22,12 @@ export default function DisplayFormComponent({
           <li>{generalInfo.phoneNum}</li>
           <li>{generalInfo.email}</li>
         </ul>
+      </div>
+      <div>
+        <h2 className="font-bold text-lg border-b-2 border-yellow-500 max-w-fit mb-4">
+          Professional Summary
+        </h2>
+        <p>{professionalSummary}</p>
       </div>
       <div>
         <h2 className="font-bold text-lg border-b-2 border-yellow-500 max-w-fit mb-4">
@@ -66,4 +73,5 @@ DisplayFormComponent.propTypes = {
   generalInfo: PropTypes.object,
   workExp: PropTypes.object,
   educationalExp: PropTypes.object,
+  professionalSummary: PropTypes.string.isRequired,
 };

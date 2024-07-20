@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import EducationalExp from "./components/EducationalExp";
 import GeneralInfo from "./components/GeneralInfo";
 import WorkExp from "./components/WorkExp";
+import ProfessionalSummary from "./components/ProfessionalSummary";
 
 export default function Form({
   generalInfo,
@@ -10,14 +11,20 @@ export default function Form({
   setWorkExp,
   educationalExp,
   setEducationalExp,
+  professionalSummary,
+  setProfessionalSummary,
 }) {
   function handelSubmit(e) {
     e.preventDefault();
   }
+
   return (
     <form onSubmit={handelSubmit} className="grid gap-14 ">
       <GeneralInfo generalInfo={generalInfo} setGeneralInfo={setGeneralInfo} />
-
+      <ProfessionalSummary
+        professionalSummary={professionalSummary}
+        setProfessionalSummary={setProfessionalSummary}
+      />
       <WorkExp workExp={workExp} setWorkExp={setWorkExp} />
 
       <EducationalExp
@@ -36,10 +43,12 @@ export default function Form({
 }
 
 Form.propTypes = {
-  generalInfo: PropTypes.object,
-  setGeneralInfo: PropTypes.func,
-  workExp: PropTypes.object,
-  setWorkExp: PropTypes.func,
-  educationalExp: PropTypes.object,
-  setEducationalExp: PropTypes.func,
+  generalInfo: PropTypes.object.isRequired,
+  setGeneralInfo: PropTypes.func.isRequired,
+  workExp: PropTypes.object.isRequired,
+  setWorkExp: PropTypes.func.isRequired,
+  educationalExp: PropTypes.object.isRequired,
+  setEducationalExp: PropTypes.func.isRequired,
+  professionalSummary: PropTypes.string.isRequired,
+  setProfessionalSummary: PropTypes.func.isRequired,
 };

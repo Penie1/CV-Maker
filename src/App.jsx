@@ -28,6 +28,7 @@ function App() {
     endMonth: "",
     endYear: "",
   });
+  const [professionalSummary, setProfessionalSummary] = useState("");
 
   return (
     <main className="text-sm text-bold text-slate-700 font-mono grid sm:grid-cols-2 gap-6  min-h-dvh p-5  bg-gray-200 ">
@@ -38,11 +39,14 @@ function App() {
         setWorkExp={setWorkExp}
         educationalExp={educationalExp}
         setEducationalExp={setEducationalExp}
+        professionalSummary={professionalSummary}
+        setProfessionalSummary={setProfessionalSummary}
       />
       <DisplayFormComponent
         generalInfo={generalInfo}
         workExp={workExp}
         educationalExp={educationalExp}
+        professionalSummary={professionalSummary}
       />
     </main>
   );
