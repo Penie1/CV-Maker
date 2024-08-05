@@ -2,6 +2,12 @@ import PropTypes from "prop-types";
 import TextInput from "./TextInput";
 import DateInput from "./DateInput";
 export default function WorkExp({ workExp, setWorkExp }) {
+  const IDs = {
+    startMonth: "work-start-mon",
+    endMonth: "work-end-mon",
+    startYear: "work-start-year",
+    endYear: "work-end-year",
+  };
   function handleChange(e) {
     setWorkExp({ ...workExp, [e.target.name]: e.target.value });
   }
@@ -11,7 +17,7 @@ export default function WorkExp({ workExp, setWorkExp }) {
       <h1 className="font-bold text-2xl border-b-2 border-yellow-500 max-w-fit">
         Work Experience
       </h1>
-      <section className="grid pb-12  md:grid-cols-2 gap-10 border-b  border-gray-300">
+      <section className="grid pb-12   gap-10 border-b  border-gray-300">
         <div className="flex flex-col gap-3 ">
           <label className="block" htmlFor="job-title">
             Job Title
@@ -37,7 +43,7 @@ export default function WorkExp({ workExp, setWorkExp }) {
             handleChange={handleChange}
           />
         </div>
-        <DateInput exprience={workExp} handleChange={handleChange} />
+        <DateInput id={IDs} exprience={workExp} handleChange={handleChange} />
         <div className="flex flex-col gap-3 ">
           <label className="block" htmlFor="responsibility">
             Main Responsibilities

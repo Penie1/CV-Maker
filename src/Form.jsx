@@ -19,7 +19,7 @@ export default function Form({
   }
 
   return (
-    <form onSubmit={handelSubmit} className="grid gap-14 ">
+    <form onSubmit={handelSubmit} className="grid gap-14 " autoComplete="on">
       <GeneralInfo generalInfo={generalInfo} setGeneralInfo={setGeneralInfo} />
       <ProfessionalSummary
         professionalSummary={professionalSummary}

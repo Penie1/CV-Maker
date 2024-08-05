@@ -5,6 +5,12 @@ export default function EducationalExp({ educationalExp, setEducationalExp }) {
   function handleChange(e) {
     setEducationalExp({ ...educationalExp, [e.target.name]: e.target.value });
   }
+  const IDs = {
+    startMonth: "education-start-mon",
+    endMonth: "education-end-mon",
+    startYear: "education-start-year",
+    endYear: "education-end-year",
+  };
 
   return (
     <>
@@ -38,7 +44,11 @@ export default function EducationalExp({ educationalExp, setEducationalExp }) {
           />
         </div>
 
-        <DateInput exprience={educationalExp} handleChange={handleChange} />
+        <DateInput
+          id={IDs}
+          exprience={educationalExp}
+          handleChange={handleChange}
+        />
       </section>
     </>
   );
