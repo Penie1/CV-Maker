@@ -24,13 +24,13 @@ export default function DisplayFormComponent({
         </ul>
       </div>
       <div>
-        <h2 className="font-bold text-lg border-b-2 border-yellow-500 max-w-fit mb-4">
+        <h2 className="font-bold mx-auto text-lg border-b-2 border-yellow-500 max-w-fit mb-6">
           Professional Summary
         </h2>
         <p>{professionalSummary}</p>
       </div>
       <div>
-        <h2 className="font-bold text-lg border-b-2 border-yellow-500 max-w-fit mb-4">
+        <h2 className="font-bold mx-auto text-lg border-b-2 border-yellow-500 max-w-fit mb-6">
           Work Experience
         </h2>
         <p className="font-bold mb-2"> {workExp.job}</p>
@@ -38,7 +38,6 @@ export default function DisplayFormComponent({
           <li className="font-semibold text-sm"> {workExp.company}</li>
 
           <div className="flex gap-2 text-sm mb-3">
-            {" "}
             <li>{workStartDate}</li>
             {workStartDate.length > 1 && <span>-</span>}
             <li>{workEndDate}</li>
@@ -48,7 +47,7 @@ export default function DisplayFormComponent({
       </div>
 
       <div>
-        <h2 className="font-bold text-lg border-b-2 border-yellow-500 max-w-fit mb-4">
+        <h2 className="font-bold mx-auto text-lg border-b-2 border-yellow-500 max-w-fit mb-6">
           Educational Experience
         </h2>
 
