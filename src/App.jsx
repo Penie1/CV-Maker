@@ -36,7 +36,7 @@ function App() {
   }
 
   return (
-    <main className="flex flex-col items-center gap-8">
+    <main className="flex flex-col  gap-8 w-full">
       <div
         className={`text-sm text-bold text-slate-700 font-mono grid gap-6 min-h-dvh p-5 bg-gray-200 ${
           isSubmitted ? "sm:grid-cols-1" : "sm:grid-cols-2"
@@ -64,7 +64,7 @@ function App() {
 
       {isSubmitted && (
         <button
-          className="border border-slate-700 w-32 px-5 py-2 mb-3 rounded-md  -col-start-2  text-yellow-500 bg-slate-600 hover:text-slate-50 "
+          className="border self-center border-slate-700 w-32 px-5 py-2 mb-3 rounded-md  -col-start-2  text-yellow-500 bg-slate-600 hover:text-slate-50 "
           onClick={handleOnClick}
         >
           Edit
