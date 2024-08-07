@@ -31,7 +31,7 @@ function App() {
   const [professionalSummary, setProfessionalSummary] = useState("");
 
   return (
-    <main className="text-sm text-bold text-slate-700 font-mono grid sm:grid-cols-2 gap-6  min-h-dvh p-5  bg-gray-200 ">
+    <main className="text-sm text-bold text-slate-700 font-sans grid sm:grid-cols-2 gap-6  min-h-dvh p-5 bg-opacity-50 bg-neutral-400 ">
       <Form
         generalInfo={generalInfo}
         setGeneralInfo={setGeneralInfo}
