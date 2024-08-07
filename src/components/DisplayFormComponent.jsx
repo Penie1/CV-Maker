@@ -15,10 +15,10 @@ export default function DisplayFormComponent({
   const educationEndDate = `${educationalExp.endMonth} ${educationalExp.endYear}`;
 
   return (
-    <section className="  flex flex-col gap-14 font-garamond text-base min-h-dvh">
+    <section className=" px-4 py-12  h-max sticky top-2 bg-zinc-100 flex flex-col gap-14 font-garamond text-base min-h-dvh">
       <div>
         <h1 className="text-3xl text-center mb-4"> {fullName}</h1>
-        <ul className="flex gap-10 bg-neutral-700 p-4 text-white">
+        <ul className="flex gap-10 bg-neutral-700 p-2 text-white">
           <li>{generalInfo.phoneNum}</li>
           <li>{generalInfo.email}</li>
         </ul>
