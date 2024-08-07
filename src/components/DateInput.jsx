@@ -19,7 +19,9 @@ export default function DateInput({ exprience, handleChange, id }) {
             value={exprience.startMonth}
             onChange={handleChange}
           >
-            <option className="text-gray-400 ">Months</option>
+            <option className="text-gray-400 " value="">
+              Months
+            </option>
             {months.map((mon) => (
               <option key={mon} value={mon.slice(0, 3)}>
                 {mon}
@@ -39,7 +41,9 @@ export default function DateInput({ exprience, handleChange, id }) {
             value={exprience.startYear}
             onChange={handleChange}
           >
-            <option className="text-gray-400">Years</option>
+            <option className="text-gray-400" value="">
+              Years
+            </option>
             {startYears.map((year) => (
               <option key={year}>{year}</option>
             ))}
@@ -60,7 +64,9 @@ export default function DateInput({ exprience, handleChange, id }) {
             value={exprience.endMonth}
             onChange={handleChange}
           >
-            <option className="text-gray-400">Months</option>
+            <option className="text-gray-400" value="">
+              Months
+            </option>
             {months.map((mon) => (
               <option key={mon} value={mon.slice(0, 3)}>
                 {mon}
@@ -80,7 +86,9 @@ export default function DateInput({ exprience, handleChange, id }) {
             value={exprience.endYear}
             onChange={handleChange}
           >
-            <option className="text-gray-400">Years</option>
+            <option className="text-gray-400" value="">
+              Years
+            </option>
             {endYears.map((year) => (
               <option key={year}>{year}</option>
             ))}
