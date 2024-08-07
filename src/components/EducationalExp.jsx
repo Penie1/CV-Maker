@@ -14,11 +14,10 @@ export default function EducationalExp({ educationalExp, setEducationalExp }) {
 
   return (
     <>
-      {" "}
-      <h1 className="font-bold text-2xl border-b-2 border-yellow-500 max-w-fit">
+      <h1 className="font-bold mx-auto text-2xl border-b-2 border-yellow-500 max-w-fit">
         Educational Experience
       </h1>
-      <section className="grid  md:grid-cols-2 gap-10 ">
+      <section className="grid  gap-10 ">
         <div className="flex flex-col gap-3 ">
           <label className="block" htmlFor="study">
             Field of study

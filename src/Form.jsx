@@ -36,7 +36,7 @@ export default function Form({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-14 " autoComplete="on">
+    <form onSubmit={handleSubmit} className="grid gap-20" autoComplete="on">
       <GeneralInfo generalInfo={generalInfo} setGeneralInfo={setGeneralInfo} />
       <ProfessionalSummary
         professionalSummary={professionalSummary}
@@ -48,7 +48,7 @@ export default function Form({
         setEducationalExp={setEducationalExp}
       />
       <button
-        className="border-1  border-amber-600 max-w-32 px-5 py-2 rounded-md  -col-start-2 bg-slate-700 text-gray-300 hover:text-yellow-500"
+        className="border-1 justify-self-center border-amber-600 sm:w-40 w-full px-5 py-2 rounded-md  -col-start-2 bg-slate-700 text-gray-300 hover:text-yellow-500"
         type="submit"
       >
         DONE

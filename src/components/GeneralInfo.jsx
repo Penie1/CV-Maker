@@ -7,7 +7,7 @@ export default function GeneralInfo({ generalInfo, setGeneralInfo }) {
 
   return (
     <>
-      <h1 className="font-bold text-2xl border-b-2 border-yellow-500 max-w-fit">
+      <h1 className="font-bold mx-auto text-2xl border-b-2 border-yellow-500 max-w-fit">
         Personal Details
       </h1>
       <section className="grid  md:grid-cols-2 gap-10 border-b  border-gray-300  pb-12">
@@ -41,7 +41,7 @@ export default function GeneralInfo({ generalInfo, setGeneralInfo }) {
             Phone Number
           </label>
           <input
-            className="bg-gray-100   p-2  focus:border-yellow-500 focus:outline focus:outline-1 focus:outline-yellow-500 focus:bg-slate-100 border  border-slate-300 rounded-md border-1 sm:w-full w-2/3"
+            className="bg-gray-100   p-2  focus:border-yellow-500 focus:outline focus:outline-1 focus:outline-yellow-500 focus:bg-slate-100 border  border-slate-300 rounded-md border-1 w-full "
             required
             name="phoneNum"
             type="tel"
@@ -56,7 +56,7 @@ export default function GeneralInfo({ generalInfo, setGeneralInfo }) {
             Email Address
           </label>
           <input
-            className="bg-gray-100 p-2  focus:border-yellow-500 focus:outline focus:outline-1 focus:outline-yellow-500 focus:bg-slate-100 border  border-slate-300 rounded-md border-1 sm:w-full w-2/3"
+            className="bg-gray-100 p-2  focus:border-yellow-500 focus:outline focus:outline-1 focus:outline-yellow-500 focus:bg-slate-100 border  border-slate-300 rounded-md border-1 w-full "
             required
             name="email"
             type="email"

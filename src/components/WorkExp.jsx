@@ -14,7 +14,7 @@ export default function WorkExp({ workExp, setWorkExp }) {
 
   return (
     <>
-      <h1 className="font-bold text-2xl border-b-2 border-yellow-500 max-w-fit">
+      <h1 className="font-bold mx-auto text-2xl border-b-2 border-yellow-500 max-w-fit">
         Work Experience
       </h1>
       <section className="grid pb-12   gap-10 border-b  border-gray-300">
@@ -50,7 +50,7 @@ export default function WorkExp({ workExp, setWorkExp }) {
           </label>
           <textarea
             name="responsibility"
-            className="bg-gray-100   p-2  focus:border-yellow-500 focus:outline focus:outline-1 focus:outline-yellow-500 focus:bg-slate-100 border  border-slate-300 rounded-md border-1 sm:w-full w-2/3"
+            className="bg-gray-100   p-2  focus:border-yellow-500 focus:outline focus:outline-1 focus:outline-yellow-500 focus:bg-slate-100 border  border-slate-300 rounded-md border-1 w-full min-h-40 "
             id="responsibility"
             value={workExp.responsibility}
             onChange={handleChange}
