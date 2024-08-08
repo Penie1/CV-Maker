@@ -1,4 +1,4 @@
-# CV Applicaton
+# CV Application
 CV Application is a simple CV builder application built using React.js.
 
 ## Table of Contents
@@ -11,12 +11,12 @@ CV Application is a simple CV builder application built using React.js.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Penie1/CV-Maker.git
+   git clone https://github.com/Penie1/CV-Application.git
 
 2. Navigate to the project directory:
 
    ```bash
-   cd CV-Maker
+   cd CV-Application
 ## Usage
 1. Start the development server:
    ```bash
