@@ -1,4 +1,4 @@
-# CV Maker
+# CV Applicaton
 CV Application is a simple CV builder application built using React.js.
 
 ## Table of Contents
